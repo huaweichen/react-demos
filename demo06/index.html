@@ -9,9 +9,15 @@
     <div id="example"></div>
     <script type="text/babel">
 
-      var data = 123;
+//      var data = "asdffdsasdf";
 
       var MyTitle = React.createClass({
+        getDefaultProps: function () {
+          return {
+          	title: 'Hello world'
+          };
+        },
+
         propTypes: {
           title: React.PropTypes.string.isRequired,
         },
@@ -22,7 +28,7 @@
       });
 
       ReactDOM.render(
-        <MyTitle title={data} />,
+        <MyTitle></MyTitle>,
         document.getElementById('example')
       );
 

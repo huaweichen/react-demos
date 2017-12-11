@@ -29,8 +29,11 @@
         },
 
         render: function () {
+          var style = {
+          	opacity: this.state.opacity
+          };
           return (
-            <div style={{opacity: this.state.opacity}}>
+            <div style={style}>
               Hello {this.props.name}
             </div>
           );
